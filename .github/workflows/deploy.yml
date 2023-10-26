@@ -10,6 +10,13 @@ on:
 permissions:
   contents: write
 
+env:
+  APP_URL: ${{ vars.APP_URL }}
+  BASE_URL: ${{ vars.BASE_URL }}
+  TAILING_SLASH: ${{ vars.TAILING_SLASH }}
+  PROJECT_NAME: ${{ vars.PROJECT_NAME }}
+  ORGANIZATION_NAME: ${{ vars.ORGANIZATION_NAME }}
+
 jobs:
   deploy:
     name: Deploy to GitHub Pages
