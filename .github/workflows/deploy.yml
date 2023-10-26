@@ -46,9 +46,18 @@ jobs:
           # You can swap them out with your own user credentials.
           user_name: github-actions[bot]
           user_email: 41898282+github-actions[bot]@users.noreply.github.com
-      - name: Send Slack message
-        if: ${{ always() }}
+      - name: Send Slack success message
         uses: rtCamp/action-slack-notify@v2
         env:
+          SLACK_MESSAGE: 'Deployment successful :rocket:'
+          SLACK_TITLE: Success
+          SLACK_COLOR: ${{ job.status }}
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+      - name: Send Slack fail message
+        if: ${{ failure() }}
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_MESSAGE: 'Deployment failed :chalkuj: :chalkuj: :chalkuj: . Please check a branch.'
+          SLACK_TITLE: Failed
           SLACK_COLOR: ${{ job.status }}
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
