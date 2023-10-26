@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpolska_scena=self.webpackChunkpolska_scena||[]).push([[8318],{3766:s=>{s.exports=JSON.parse('{"permalink":"/polska-scena-docs/blog/tags/docusaurus","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpolska_scena=self.webpackChunkpolska_scena||[]).push([[7489],{5817:a=>{a.exports=JSON.parse('{"label":"hola","permalink":"/polska-scena-docs/blog/tags/hola","allTagsPath":"/polska-scena-docs/blog/tags","count":1}')}}]);
