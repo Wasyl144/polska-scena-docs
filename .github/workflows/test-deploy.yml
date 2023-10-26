@@ -28,8 +28,19 @@ jobs:
           TAILING_SLASH: ${{ vars.APP_TAILING_SLASH }}
           PROJECT_NAME: ${{ vars.APP_PROJECT_NAME }}
           ORGANIZATION_NAME: ${{ vars.APP_ORGANIZATION_NAME }}
-      - name: Send Slack message
+      - name: Send Slack success message
         uses: rtCamp/action-slack-notify@v2
         env:
-          SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
+          SLACK_MESSAGE: 'PR success :rocket:'
+          SLACK_TITLE: Success
+          SLACK_COLOR: ${{ job.status }}
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+      - name: Send Slack fail message
+        if: ${{ failure() }}
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_MESSAGE: 'Check your pull request :chalkuj: :chalkuj: :chalkuj: .'
+          SLACK_TITLE: Failed
+          SLACK_COLOR: ${{ job.status }}
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+
