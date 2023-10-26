@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpolska_scena=self.webpackChunkpolska_scena||[]).push([[113],{9848:s=>{s.exports=JSON.parse('{"permalink":"/polska-scena-docs/blog/tags/hello","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
